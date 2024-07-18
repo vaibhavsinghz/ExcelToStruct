@@ -11,5 +11,4 @@ func main() {
 	router := gin.Default()
 
 	router.POST("/upload", controller.UploadExcel)
-	router.Run(":8080")
 }
