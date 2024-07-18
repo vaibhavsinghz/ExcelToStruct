@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"ExcelToStruct/controller"
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	fmt.Println("hello world")
+	router := gin.Default()
+
+	router.POST("/upload", controller.UploadExcel)
+	router.Run(":8080")
 }
